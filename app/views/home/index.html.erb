@@ -5,21 +5,30 @@
     <hr>
     <%= Date.today.strftime("%A, %B %d") %>
     <hr>
-    <%= @data["name"] %>  <%= @data["sys"]["country"] %>
+    <%
+=begin%>
+ <%= @data["name"] %>  <%= @data["sys"]["country"] %>
     <hr>
+<%
+=end%>
 
-    <img class="mx-auto" src="http://openweathermap.org/img/wn/<%= @data["weather"].first["icon"]%>@2x.png"></img>
-    <hr>
+
+
   </h1>
+  <img class="mx-auto" src="<%= @weather.icon_url%>"</img>
+  <hr>
+  <p><%= @weather.status%></p>
+  <hr>
+  <p><%= @weather.description %></p>
 
-  <p><%= @data["weather"].first["main"] %></p>
   <hr>
-  <p><%= @data["weather"].first["description"] %></p>
+  <p>Temp: <%= @weather.temp %> Celsius</p>
+  <hr>
 
-  <hr>
-  <p>Temp: <%= @data["main"]["temp"]%> Celsius</p>
-  <hr>
-  <p>Feels Like: <%= @data["main"]["feels_like"]%> Celsius</p>
+
+  <%
+=begin%>
+ <p>Feels Like: <%= @data["main"]["feels_like"]%> Celsius</p>
   <hr>
   <p>Min Temp: <%= @data["main"]["temp_min"]%> Celsius</p>
   <hr>
@@ -27,6 +36,8 @@
   <hr>
   <p>Wind Speed: <%= @data["wind"]["speed"]%></p>
   <hr>
+<%
+=end%>
 
 
 </div>
