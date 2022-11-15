@@ -1,0 +1,32 @@
+<div class="w-full text-center">
+  <h1 class="text-3xl font-bold underline">
+    Hello world!
+
+    <hr>
+    <%= Date.today.strftime("%A, %B %d") %>
+    <hr>
+    <%= @data["name"] %>  <%= @data["sys"]["country"] %>
+    <hr>
+
+    <img class="mx-auto" src="http://openweathermap.org/img/wn/<%= @data["weather"].first["icon"]%>@2x.png"></img>
+    <hr>
+  </h1>
+
+  <p><%= @data["weather"].first["main"] %></p>
+  <hr>
+  <p><%= @data["weather"].first["description"] %></p>
+
+  <hr>
+  <p>Temp: <%= @data["main"]["temp"]%> Celsius</p>
+  <hr>
+  <p>Feels Like: <%= @data["main"]["feels_like"]%> Celsius</p>
+  <hr>
+  <p>Min Temp: <%= @data["main"]["temp_min"]%> Celsius</p>
+  <hr>
+  <p>Max Temp: <%= @data["main"]["temp_max"]%> Celsius</p>
+  <hr>
+  <p>Wind Speed: <%= @data["wind"]["speed"]%></p>
+  <hr>
+
+
+</div>
