@@ -7,7 +7,7 @@ class HomeController < ApplicationController
   end
 end
 
-# url = "https://api.openweathermap.org/data/2.5/weather?lat=-33.86785&lon=151.20732&units=Metric&appid=5b621b055d20d6ca988741eb2cfc6642"
+
 
 # uri = URI(url)
 
